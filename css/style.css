@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@100&display=swap');
+
+:root{
+    --font-blanc: #fafafa;
+    --font-green: #00614E;
+    --font-blue: #09599A;
+    --font-red: #d63031;
+    --header-color: black;
+}
+
+
+body header{
+    background-color: var(--header-color);
+}
+body header h1{
+    text-align: center;
+    color: var(--font-blanc);
+    font-family: 'Open Sans', sans-serif;
+    padding: 1.5rem 0 1rem 0;
+}
+
+body header h1::before{
+    content: url(../asset/logo.svg) ;
+    filter: invert(100%);
+    margin-right: 1rem;
+    vertical-align: middle;
+}
+
+main table{
+    border-collapse: collapse;
+    margin: 5rem auto 2rem auto;
+}
+
+main table thead tr th{
+    background-color: var(--font-green);
+    color: var(--font-blanc);
+}
+
+main table tbody tr td{
+    line-height: 4vh;
+}
+
+main table tbody tr td, main table thead tr th{
+    border: solid 0.1rem var(--font-blanc);
+    text-align: center;
+    line-height: 4vh;
+    margin: 5rem;
+}
+
+main a{
+    background-color: var(--font-blue);
+    color: var(--font-blanc);
+    padding: 1rem 3rem;
+    margin: 0 auto;
+    display: block;
+    max-width: 13rem;
+}
+
+/* add user */
+
+
+main section{
+    width: 50rem;
+    margin: 5rem auto;
+    border:solid 0.15rem transparent;
+}
+
+main section h1{
+    color: var(--font-green);
+    margin: 2rem 0;
+}
+
+.form input, .form label{
+    display:block;
+    width: 100%;
+    resize: none;
+    line-height: 4vh;
+}
+
+
+.form input[type=text], .form input[type=email]{
+    border:solid 0.15rem transparent;
+    border-bottom-color: #ccc;
+    max-width: 50%;
+}
+
+.form input[type=text]:focus, .form input[type=email]:focus{
+    border-color: black;
+    transition-duration: 1s;
+    max-width: 100%;
+}
+
+
+.form input[type=submit]{
+    background-color: var(--font-green);
+    color: var(--font-blanc);
+    max-width: 15rem;
+    margin: 2rem 0 ;
+  }
+
+
