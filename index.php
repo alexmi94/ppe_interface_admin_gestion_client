@@ -1,6 +1,7 @@
 <?php
 $title = "Maison des ligues : Interface admin";
 include_once("./src/head.inc.php");
+include_once("./src/ddb.inc.php");
 ?>
 <body>
     <header>
@@ -18,30 +19,26 @@ include_once("./src/head.inc.php");
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>test</td>
-                <td>test</td>
-                <td>test</td>
-                <td>test</td>
-                <td>test</td>
-            </tr>
-            <tr>
-                <td>test</td>
-                <td>test</td>
-                <td>test</td>
-                <td>test</td>
-                <td>test</td>
-            </tr>
-            <tr>
-                <td>test</td>
-                <td>test</td>
-                <td>test</td>
-                <td>test</td>
-                <td>test</td>
-            </tr>
+        <?php
+            $ddb = new ddb();
+            $result = $ddb->select("SELECT * FROM client_ligue");
+            if(isset($result)){
+                foreach($result as $value){
+                    echo "
+                    <tr>
+                    <td>".$value[0]."</td>
+                    <td>".$value[1]."</td>
+                    <td>".$value[2]."</td>
+                    <td>".$value[3]."</td>
+                    <td>".$value[4]."</td>
+                    </tr>
+                    ";
+                }
+            }
+        ?>
         </tbody>
         </table>
-        <a href="">+ Ajouter un client</a>
+        <a href="adduser.php">+ Ajouter un client</a>
     </main>
 </body>
 </html>

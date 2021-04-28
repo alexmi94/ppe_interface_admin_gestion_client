@@ -1,22 +1,11 @@
 <?php
-$title = "Crée un utilisateur";
+$title = "Modification";
 include_once("./src/head.inc.php");
-include_once("./src/ddb.inc.php");
-include_once("./src/client.inc.php");
-
-if(isset($_POST["send"])){
-    $client = new client($_POST["nom"], $_POST["prenom"], $_POST["age"], $_POST["mail"]);
-    $client->add_ddb();
-}
-
 ?>
 <body>
 <main>
     <section>
-        <h1>Ajouter un utilisateur</h1>
-        <?php
-            
-        ?>
+        <h1>Modifier un utilisateur</h1>
         <div class="form" id="form" role="region">
             <form action="" method="post">
                     <label for="nom">Nom :</label>
@@ -26,10 +15,13 @@ if(isset($_POST["send"])){
                     <label for="age">Age :</label>
                     <input type="text" name="age" id="age" aria-required="true">
                     <label for="mail">Adresse mail :</label>
-                    <input type="text" name="mail" id="mail" aria-required="true">
-                    <button type="submit" name="send">Créer <img src="./asset/edit.svg" alt="Créer"></button>
+                    <input type="email" name="mail" id="mail" aria-required="true">
+                    <button type="submit">Mettre a jour <img src="./asset/edit.svg" alt="mettre a jour"></button>
             </form>
         </div>
+    </section>
+    <section>
+        
     </section>
 </main>
 </body>

@@ -8,6 +8,10 @@
     --header-color: black;
 }
 
+main p{
+    text-align: center;
+    color: var(--font-red);
+}
 
 body header{
     background-color: var(--header-color);
@@ -40,9 +44,26 @@ main table tbody tr td{
     line-height: 4vh;
 }
 
+main table tbody tr td:nth-child(1){
+    width: 30rem;
+    text-align: center;
+}
+
+main table tbody tr td:nth-child(2), main table tbody tr td:nth-child(3){
+    width: 15rem;
+}
+
+main table tbody tr td:nth-child(4){
+    width: 7rem;
+    text-align: center;
+}
+
+main table tbody tr td:nth-child(5){
+    width: 20rem;
+}
+
 main table tbody tr td, main table thead tr th{
     border: solid 0.1rem var(--font-blanc);
-    text-align: center;
     line-height: 4vh;
     margin: 5rem;
 }
@@ -90,12 +111,30 @@ main section h1{
     max-width: 100%;
 }
 
+.form button{
+    background-color: var(--font-green);
+    color: var(--font-blanc);
+    width: 15rem;
+    height: 3.5rem;
+    display: block;
+    margin-top: 1rem;
+    cursor: pointer;
+}
 
+.form button img{
+    max-width: 2rem;
+    filter: invert(100%);
+    vertical-align: -.5rem;
+}
+
+
+
+/*
 .form input[type=submit]{
     background-color: var(--font-green);
     color: var(--font-blanc);
     max-width: 15rem;
-    margin: 2rem 0 ;
+    margin: 2rem 0;
   }
-
+*/
 
