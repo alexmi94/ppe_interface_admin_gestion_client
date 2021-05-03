@@ -45,21 +45,21 @@ main table tbody tr td{
 }
 
 main table tbody tr td:nth-child(1){
-    width: 30rem;
+    min-width: 40rem;
     text-align: center;
 }
 
 main table tbody tr td:nth-child(2), main table tbody tr td:nth-child(3){
-    width: 15rem;
+    min-width: 15rem;
 }
 
 main table tbody tr td:nth-child(4){
-    width: 7rem;
+    min-width: 7rem;
     text-align: center;
 }
 
 main table tbody tr td:nth-child(5){
-    width: 20rem;
+    min-width: 25rem;
 }
 
 main table tbody tr td, main table thead tr th{
@@ -68,13 +68,21 @@ main table tbody tr td, main table thead tr th{
     margin: 5rem;
 }
 
-main a{
+main table tbody tr:nth-child(2n+1){
+    background-color: rgba(0, 0, 0, .1);
+}
+
+main .addclient{
     background-color: var(--font-blue);
     color: var(--font-blanc);
     padding: 1rem 3rem;
     margin: 0 auto;
     display: block;
     max-width: 13rem;
+}
+
+main .edit img{
+    vertical-align: middle;
 }
 
 /* add user */
@@ -125,6 +133,7 @@ main section h1{
     max-width: 2rem;
     filter: invert(100%);
     vertical-align: -.5rem;
+    margin-left: .5rem;
 }
 
 

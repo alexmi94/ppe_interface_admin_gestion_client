@@ -39,5 +39,28 @@
             return $result;
         }
     }
+
+    public function update($sql_requete, $arg_sql){
+        $bdd = $this->connection();
+        if(isset($bdd)){
+            $req = $bdd->prepare($sql_requete);
+            $req->execute($arg_sql);
+            $req->closeCursor();
+            return true;
+        }
+        return false;
+    }
+
+    public function delete($sql_requete, $arg_sql){
+        $bdd = $this->connection();
+        if(isset($bdd)){
+            $req = $bdd->prepare($sql_requete);
+            $req->execute($arg_sql);
+            $req->closeCursor();
+            return true;
+        }
+        return false;
+    }
+    
 }
 ?>

@@ -2,6 +2,10 @@
 $title = "Maison des ligues : Interface admin";
 include_once("./src/head.inc.php");
 include_once("./src/ddb.inc.php");
+
+$ddb = new ddb();
+$result = $ddb->select("SELECT * FROM client_ligue");
+
 ?>
 <body>
     <header>
@@ -20,25 +24,23 @@ include_once("./src/ddb.inc.php");
         </thead>
         <tbody>
         <?php
-            $ddb = new ddb();
-            $result = $ddb->select("SELECT * FROM client_ligue");
             if(isset($result)){
                 foreach($result as $value){
-                    echo "
+                    echo '
                     <tr>
-                    <td>".$value[0]."</td>
-                    <td>".$value[1]."</td>
-                    <td>".$value[2]."</td>
-                    <td>".$value[3]."</td>
-                    <td>".$value[4]."</td>
+                    <td><a href="edit.php?id='.$value[0].'" class="edit"><img src="./asset/edit.svg" alt="modifier"> Modifier ou <img src="./asset/remove.svg" alt="supprimmer"> supprimer</a></td>
+                    <td>'.$value[1].'</td>
+                    <td>'.$value[2].'</td>
+                    <td>'.$value[3].'</td>
+                    <td>'.$value[4].'</td>
                     </tr>
-                    ";
+                    ';
                 }
             }
         ?>
         </tbody>
         </table>
-        <a href="adduser.php">+ Ajouter un client</a>
+        <a href="adduser.php" class="addclient">+ Ajouter un client</a>
     </main>
 </body>
 </html>

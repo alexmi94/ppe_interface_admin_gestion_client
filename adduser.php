@@ -6,7 +6,7 @@ include_once("./src/client.inc.php");
 
 if(isset($_POST["send"])){
     $client = new client($_POST["nom"], $_POST["prenom"], $_POST["age"], $_POST["mail"]);
-    $client->add_ddb();
+    $erreur = $client->add_ddb();
 }
 
 ?>
@@ -15,7 +15,9 @@ if(isset($_POST["send"])){
     <section>
         <h1>Ajouter un utilisateur</h1>
         <?php
-            
+        if(isset($erreur)){
+            print $erreur;
+        }
         ?>
         <div class="form" id="form" role="region">
             <form action="" method="post">
