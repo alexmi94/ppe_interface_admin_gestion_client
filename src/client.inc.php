@@ -107,7 +107,7 @@
                 return $erreur;
             }
             $ddb = new ddb();
-            $ddb->update_ddb("UPDATE client_ligue SET nom = ?, prenom = ?, age = ? , email = ? WHERE id_client = ?", array($this->getNom(), $this->getPrenom(), $this->getAge() ,$this->getEmail(), $this->getIdClient()));
+            $ddb->update("UPDATE client_ligue SET nom = ?, prenom = ?, age = ? , email = ? WHERE id_client = ?", array($this->getNom(), $this->getPrenom(), $this->getAge() ,$this->getEmail(), $this->getIdClient()));
             header("location:index.php");
             exit();
         }

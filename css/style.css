@@ -89,7 +89,7 @@ main .edit img{
 
 
 main section{
-    width: 50rem;
+    max-width: 55rem;
     margin: 5rem auto;
     border:solid 0.15rem transparent;
 }
@@ -136,6 +136,19 @@ main section h1{
     margin-left: .5rem;
 }
 
+
+.form:first-child form button{
+    background-color: var(--font-red);
+    margin: 3rem 0 3rem 2rem;
+}
+
+
+main .remove{
+    border:solid 0.15rem transparent;
+    border-bottom-color: #ccc;
+    border-top-color: #ccc;
+    max-width: 60rem;
+} 
 
 
 /*
