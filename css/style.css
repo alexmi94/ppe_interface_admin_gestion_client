@@ -42,6 +42,7 @@ main table thead tr th{
 
 main table tbody tr td{
     line-height: 4vh;
+    padding-left: .5rem;
 }
 
 main table tbody tr td:nth-child(1){
@@ -64,7 +65,7 @@ main table tbody tr td:nth-child(5){
 
 main table tbody tr td, main table thead tr th{
     border: solid 0.1rem var(--font-blanc);
-    line-height: 4vh;
+    line-height: 5vh;
     margin: 5rem;
 }
 
@@ -75,7 +76,7 @@ main table tbody tr:nth-child(2n+1){
 main .addclient{
     background-color: var(--font-blue);
     color: var(--font-blanc);
-    padding: 1rem 3rem;
+    padding: 1.5rem 3rem;
     margin: 0 auto;
     display: block;
     max-width: 13rem;
@@ -86,7 +87,6 @@ main .edit img{
 }
 
 /* add user */
-
 
 main section{
     max-width: 55rem;
@@ -108,7 +108,7 @@ main section h1{
 
 
 .form input[type=text], .form input[type=email]{
-    border:solid 0.15rem transparent;
+    border:solid 0.1rem transparent;
     border-bottom-color: #ccc;
     max-width: 50%;
 }
@@ -137,13 +137,14 @@ main section h1{
 }
 
 
-.form:first-child form button{
+.remove .form form button{
     background-color: var(--font-red);
-    margin: 3rem 0 3rem 2rem;
+    margin: 3rem 0 3rem 2.5rem;
 }
 
 
 main .remove{
+    margin-top: 10rem;
     border:solid 0.15rem transparent;
     border-bottom-color: #ccc;
     border-top-color: #ccc;
@@ -151,12 +152,29 @@ main .remove{
 } 
 
 
-/*
-.form input[type=submit]{
-    background-color: var(--font-green);
-    color: var(--font-blanc);
-    max-width: 15rem;
-    margin: 2rem 0;
-  }
-*/
+section:first-child::before{
+    display: flex;
+    border:solid 0.3rem transparent;
+    border-top-color: var(--font-green);
+    border-left-color: var(--font-green);
+    width: 5rem;
+    height: 5rem;
+    content : '';
+    position: relative;
+    left: -3rem;
+    top: 5rem;
+}
 
+
+section:first-child::after{
+    display: block;
+    border:solid 0.3rem transparent;
+    border-right-color: var(--font-green);
+    border-bottom-color: var(--font-green);
+    width: 5rem;
+    height: 5rem;
+    content : '';
+    position: relative;
+    left: 4rem;
+    float: right;
+}

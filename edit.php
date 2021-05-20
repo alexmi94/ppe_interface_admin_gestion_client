@@ -47,7 +47,7 @@ if(!isset($_GET["id"])){
             <form action="" method="post">
                     <button type="submit" name="remove">Supprimer<img src="./asset/remove.svg" alt="mettre a jour"></button>
             </form>
-        </div>
+    </div>
     </section>
 </main>
 </body>

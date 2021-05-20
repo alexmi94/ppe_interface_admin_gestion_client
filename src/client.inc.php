@@ -69,13 +69,17 @@
         }
 
         private function verifyvalueempty(){
-            if(empty($this->getNom()) && empty($this->getPrenom()) && empty($this->getAge()) && empty($this->getEmail())){
+            if(empty($this->getNom()) || empty($this->getPrenom()) || empty($this->getAge()) || empty($this->getEmail())){
                 return "<p>Des champs sont vides</p>";
             }
 
         }
 
         private function verify(){
+            $erreur = $this->verifyvalueempty();
+            if(isset($erreur)){
+                return $erreur;
+            }
             $erreur = $this->verifyAge();
             if(isset($erreur)){
                 return $erreur;
@@ -84,14 +88,11 @@
             if(isset($erreur)){
                 return $erreur;
             }
-            $erreur = $this->verifyvalueempty();
-            if(isset($erreur)){
-                return $erreur;
-            }
+
         }
 
         public function add_ddb(){
-            $erreur = $this->verify;
+            $erreur = $this->verify();
             if(isset($erreur)){
                 return $erreur;
             }
