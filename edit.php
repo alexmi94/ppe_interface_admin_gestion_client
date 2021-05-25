@@ -27,8 +27,8 @@ if(!isset($_GET["id"])){
 <body>
 <main>
     <section>
-        <h1>Modifier un utilisateur</h1>
-        <div class="form" id="form" role="region">
+        <h1><a href="index.php"> Voir la liste des utilisateurs ></a></h1>
+        <div class="form" role="region">
             <form action="" method="post">
                     <label for="nom">Nom :</label>
                     <input type="text" name="nom" id="nom" aria-required="true" value=<?php print $result[0][1] ?> autofocus>
@@ -43,7 +43,7 @@ if(!isset($_GET["id"])){
         </div>
     </section>
     <section class="remove">
-    <div class="form" id="form" role="region">
+    <div class="form" role="region">
             <form action="" method="post">
                     <button type="submit" name="remove">Supprimer<img src="./asset/remove.svg" alt="mettre a jour"></button>
             </form>

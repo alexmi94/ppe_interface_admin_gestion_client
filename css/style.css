@@ -86,7 +86,7 @@ main .edit img{
     vertical-align: middle;
 }
 
-/* add user */
+/* add and edit user */
 
 main section{
     max-width: 55rem;
@@ -94,8 +94,11 @@ main section{
     border:solid 0.15rem transparent;
 }
 
-main section h1{
+main section h1 a{
     color: var(--font-green);
+}
+
+main section h1{
     margin: 2rem 0;
 }
 

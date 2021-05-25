@@ -13,7 +13,7 @@ if(isset($_POST["send"])){
 <body>
 <main>
     <section>
-        <h1>Ajouter un utilisateur</h1>
+        <h1><a href="index.php"> Voir la liste des utilisateurs ></a></h1>
         <?php
         if(isset($erreur)){
             print $erreur;

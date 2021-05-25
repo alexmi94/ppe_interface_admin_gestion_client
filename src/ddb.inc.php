@@ -1,8 +1,12 @@
 <?php
     class ddb{
+        # Adresse ip de la base de données
         const host = "localhost";
+        # Nom de la base de données
         const dbname = "ppe_web";
+        # Identifiant pour se connecter à la base de données
         const user = "root";
+        # Mot de passe pour se connecter à la base de données
         const password = "";
     
 
