@@ -3,9 +3,7 @@
 ### Réalisation d'une interface administrateur pour recenser leurs clients
 
 Ce site admin a pour but de permettre aux administrateurs des 
-Maisons des ligues, de recenser leurs clients. Pour ce faire, il faut créer une 
-interface admin qui permet d’ajouter un client, modifier sont profile ou le 
-supprimer
+Maisons des ligues, de recenser leurs clients.
 
 ## Installation
 
@@ -16,4 +14,12 @@ supprimer
 
 * La page principale affiche tous les clients et leurs informations
 
+![Page principale](https://raw.githubusercontent.com/alexmi94/ppe_interface_admin_gestion_client/main/doc/page_principale.jpg)
 
+* Pour ajouter un client il faut indiquer 4 infomation **obligatoire**.  
+
+![Ajouter un client](https://raw.githubusercontent.com/alexmi94/ppe_interface_admin_gestion_client/main/doc/ajouter_client.jpg)
+
+* L'edition d'un client deja existant permet de mettre a jour les infomations sur le client ou de le supprimer
+
+![Modifier un client](https://raw.githubusercontent.com/alexmi94/ppe_interface_admin_gestion_client/main/doc/modifier_client.jpg)
